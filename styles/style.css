@@ -1,0 +1,41 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-color: #003049;
+}
+
+/* Logo and Navigation */
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+.logo-img {
+  max-width: 10rem;
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+.main-heading {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Logo and Nav Ends */
+
+h2 {
+  font-size: 1.6rem;
+  color: white;
+  font-family: inherit;
+  margin-bottom: 1rem;
+}
