@@ -1,22 +1,52 @@
 body {
   font-family: "Roboto", sans-serif;
-  color: white;
+  color: black;
   margin: 0;
   padding: 0 1rem;
-  background-color: #003049;
+  background-color: #eae2b7;
 }
 
 /* Logo and Navigation */
 
-.header-main {
-  display: flex;
-  justify-content: space-between;
-  z-index: 1000;
+.navbar {
+  display: none;
 }
 
 a {
   text-decoration: none;
+  color: black;
+  list-style: none;
+}
+
+.mobile-sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #003049;
+  height: 100%;
+  width: 15rem;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  list-style: none;
+}
+
+.mobile-sidebar li a {
+  padding: 10px 15px;
   color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.mobile-sidebar a:hover {
+  background-color: #004265;
+}
+
+.mobile-sidebar ul {
+  display: flex;
+  padding-right: 2rem;
 }
 
 /* desktop view - 800pc min */
@@ -24,7 +54,14 @@ a {
 @media (min-width: 800px) {
   .header-main {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
     box-sizing: border-box;
+  }
+
+  .mobile-sidebar {
+    display: none;
   }
 
   .navbar {
@@ -40,8 +77,8 @@ a {
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    padding: 0.75rem;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
   }
 
   .navbar ul {
@@ -50,7 +87,7 @@ a {
   }
   .navbar li a {
     padding: 10px 15px;
-    color: antiquewhite;
+    color: white;
     font-size: 1.2rem;
   }
 }
@@ -61,16 +98,21 @@ a {
 }
 
 .logo-img {
-  max-width: 10rem;
+  max-width: 13rem;
   height: auto;
   width: 100%;
   display: block;
 }
 
+/* Logo and Nav Ends */
+
 .main-heading {
-  font-size: 2rem;
-  color: white;
+  font-size: 1.6rem;
+  color: black;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @media (min-width: 800px) {
@@ -79,11 +121,9 @@ a {
   }
 }
 
-/* Logo and Nav Ends */
-
 h2 {
   font-size: 1.6rem;
-  color: white;
+  color: black;
   font-family: inherit;
   margin-bottom: 1rem;
 }
