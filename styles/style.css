@@ -1,5 +1,5 @@
 html {
-  scroll-padding-top: 4.25rem;
+  scroll-padding-top: 10rem;
   scroll-behavior: smooth;
 }
 
@@ -341,28 +341,46 @@ h2 {
 
 @media (min-width: 800px) {
   .proj-sect {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 2.5rem 4rem;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    /* got help from a friend as my flex was not lining up to my liking */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
   }
+
   .box-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    padding: 1rem;
-    margin: 1rem auto;
-    height: auto;
-    max-width: 20rem;
     background-color: white;
-    border-radius: 25px;
-    box-shadow:
-      rgba(0, 0, 0, 0.4) 0px 2px 4px,
-      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
   }
+
+  .box-wrapper a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .box-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .box-wrapper h3 {
+    margin-top: 0;
+  }
+
+  .box-wrapper p {
+    margin: 5px 0;
+  }
+}
+
+.proj-sect h2 {
+  padding: 3rem;
+  font-size: 2rem;
+  color: white;
+  text-shadow: grey 2px 2px 4px;
 }
 
 /* About Section */
