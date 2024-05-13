@@ -1,7 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: black;
-  background-color: #eae2b7;
+  background-color: #e6e1c2;
   padding-top: 3.5rem;
 }
 
@@ -218,7 +218,7 @@ main {
   position: relative;
 }
 
-.about-sect {
+.intro-sect {
   display: block;
   width: 100%;
   position: absolute;
@@ -229,24 +229,52 @@ main {
   margin: 0 auto;
 }
 
-.about-sect h1 {
-  font-size: 2.5rem;
-  color: black;
-  font-family: inherit;
-}
-
 .intro {
   width: auto;
   max-width: fit-content;
   min-width: 8rem;
   height: auto;
+  max-height: auto;
   background-color: white;
   padding: 2rem;
-  margin: 3rem 3rem;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  margin: 1.75rem 0.5rem;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 25px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 
+.img-col img {
+  width: 10rem;
+  height: 10rem;
+  max-width: 20rem;
+  border-radius: 50%;
+  max-height: auto;
+}
+
+.text-col {
+  padding: 1rem;
+  font-size: 1.6rem;
+  max-height: auto;
+}
+
+.text-col h1 {
+  font-size: 2rem;
+  color: black;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 500px) {
+  .intro {
+    flex-direction: column;
+  }
+}
 @media (min-width: 800px) {
   .main-heading {
     padding-top: 7rem;
