@@ -1,9 +1,13 @@
 body {
   font-family: "Roboto", sans-serif;
   color: black;
-  margin: 0;
-  padding: 0 1rem;
   background-color: #eae2b7;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 0;
+  }
 }
 
 /* Logo and Navigation */
@@ -12,41 +16,65 @@ body {
   display: none;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-  list-style: none;
+.sidebar-logo-img {
+  max-width: 13rem;
+  min-width: 13rem;
+  height: auto;
+  width: 13rem;
+  display: block;
+  margin-right: auto;
 }
 
 .mobile-sidebar {
-  display: flex;
-  flex-direction: column;
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #003049;
-  height: 100%;
+  height: 100vh;
   width: 15rem;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002f49ae;
+  backdrop-filter: blur(15px);
+  padding: 1rem;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
-  list-style: none;
-}
-
-.mobile-sidebar li a {
-  padding: 10px 15px;
-  color: white;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-
-.mobile-sidebar a:hover {
-  background-color: #004265;
 }
 
 .mobile-sidebar ul {
   display: flex;
-  padding-right: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.mobile-sidebar li {
+  margin: 2rem 0.25rem;
+  text-transform: uppercase;
+  width: 100%;
+  font-weight: 600;
+}
+
+.mobile-sidebar li a:hover {
+  background-color: #0089d2;
+}
+
+.mobile-sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  margin: 5rem 0;
+}
+
+.navbar ul {
+  list-style: none;
+  text-decoration: none;
 }
 
 /* desktop view - 800pc min */
@@ -61,6 +89,10 @@ a {
   }
 
   .mobile-sidebar {
+    display: none;
+  }
+
+  .sidebar-logo-img {
     display: none;
   }
 
@@ -89,19 +121,14 @@ a {
     padding: 10px 15px;
     color: white;
     font-size: 1.2rem;
+    text-decoration: none;
   }
-}
-
-.navbar ul {
-  list-style: none;
-  text-decoration: none;
-}
-
-.logo-img {
-  max-width: 13rem;
-  height: auto;
-  width: 100%;
-  display: block;
+  .logo-img {
+    max-width: 13rem;
+    height: auto;
+    width: 100%;
+    display: block;
+  }
 }
 
 /* Logo and Nav Ends */
