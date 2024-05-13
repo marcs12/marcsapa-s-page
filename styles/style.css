@@ -389,20 +389,25 @@ h2 {
 .about-me {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  min-width: 12rem;
+  align-items: flex-start;
+  text-align: left;
   height: auto;
   background-color: #ffffff;
   color: black;
   font-size: 1.6rem;
-  padding: 2rem 10rem;
-  margin: 1.75rem 0.5rem;
+  padding: 2rem;
   box-shadow:
     rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
     rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 25px;
   padding-bottom: 6rem;
+}
+
+.about-me p {
+  font-size: 1.2rem;
+  margin: 1rem;
+  min-width: 5rem;
 }
 
 /* footer */
