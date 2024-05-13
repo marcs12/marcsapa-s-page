@@ -1,3 +1,8 @@
+html {
+  scroll-padding-top: 4.25rem;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: black;
@@ -286,4 +291,96 @@ h2 {
   color: black;
   font-family: inherit;
   margin-bottom: 1rem;
+}
+
+.proj-sect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+  background-color: #fcbf49;
+  color: black;
+  padding: 2rem;
+  margin: 1.75rem 0.5rem;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 25px;
+}
+
+.proj-sect a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.box-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem auto;
+  height: auto;
+  max-width: 20rem;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.box-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+
+@media (min-width: 800px) {
+  .proj-sect {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2.5rem 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem auto;
+    height: auto;
+    max-width: 20rem;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow:
+      rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+}
+
+/* About Section */
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 12rem;
+  height: auto;
+  background-color: #ffffff;
+  color: black;
+  font-size: 1.6rem;
+  padding: 2rem 10rem;
+  margin: 1.75rem 0.5rem;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 25px;
 }
