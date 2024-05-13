@@ -2,11 +2,13 @@ body {
   font-family: "Roboto", sans-serif;
   color: black;
   background-color: #eae2b7;
+  padding-top: 3.5rem;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
   body {
-    padding: 0;
+    scroll-padding-top: 12rem;
+    padding-top: 7rem;
   }
 }
 
@@ -25,6 +27,7 @@ body {
   top: 0;
   right: 0;
   width: 100%;
+  z-index: 1001;
 }
 
 .mb-nav ul {
@@ -101,6 +104,7 @@ body {
   backdrop-filter: blur(15px);
   padding: 1rem;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1002;
 }
 
 .mobile-sidebar ul {
@@ -208,14 +212,39 @@ body {
 
 /* Logo and Nav Ends */
 
-.main-heading {
-  font-size: 1.6rem;
-  color: black;
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.about-sect {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 20%;
   margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 3rem;
+  padding-top: 4rem;
+  margin: 0 auto;
+}
+
+.about-sect h1 {
+  font-size: 2.5rem;
+  color: black;
+  font-family: inherit;
+}
+
+.intro {
+  width: auto;
+  max-width: fit-content;
+  min-width: 8rem;
+  height: auto;
+  background-color: white;
+  padding: 2rem;
+  margin: 3rem 3rem;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 25px;
 }
 
 @media (min-width: 800px) {
